@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import './App.css';
 import reactLogo from './assets/react.svg';
+import ThemeChanger from './components/theme-changer/ThemeChanger';
+import { Button } from './components/ui/button';
 import viteLogo from '/vite.svg';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="flex gap-0 border-2 border-red-500">
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
@@ -18,7 +19,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+        <Button variant="secondary" onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </Button>
+        <ThemeChanger />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
