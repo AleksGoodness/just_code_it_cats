@@ -1,23 +1,33 @@
-import { Link } from '@tanstack/react-router';
+import { Link, linkOptions } from '@tanstack/react-router';
 import ThemeChanger from '../theme-changer/ThemeChanger';
+
+const links = linkOptions([
+  {
+    to: '/',
+    label: 'purrchome',
+  },
+  {
+    to: '/about',
+    label: 'meow us',
+  },
+  {
+    to: '/gallery',
+    label: 'meowseum',
+  },
+]);
 
 const NavigationPanel = () => {
   return (
-    <header>
-      <nav className="flex items-center justify-center gap-2 p-2">
-        <Link to="/" className="[&.active]:font-bold">
-          Home
-        </Link>
-        <Link to="/about" className="[&.active]:font-bold">
-          About
-        </Link>
-        <Link to="/gallery" className="[&.active]:font-bold">
-          Gallery
-        </Link>
+    <header className="bg-background fixed w-[100%]">
+      <nav className="container mx-auto flex w-[100%] flex-wrap items-center gap-2 p-2 capitalize">
+        {links.map((link) => (
+          <Link {...link} key={link.to} className="[&.active]:text-amber-500">
+            {link.label}
+          </Link>
+        ))}
 
-        <ThemeChanger />
+        <ThemeChanger classNames="ml-auto" />
       </nav>
-      <hr />
     </header>
   );
 };

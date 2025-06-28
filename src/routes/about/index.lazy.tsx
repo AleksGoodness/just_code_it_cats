@@ -7,9 +7,9 @@ export const Route = createLazyFileRoute('/about/')({
 
 function About() {
   return (
-    <div>
-      Hello "/About"!
-      <Button variant={'action'}>send it!</Button>
+    <div className="grid items-center justify-center text-center">
+      <h1 className="p-5">Under maintenance</h1>
+      <Button variant={'action'}>meow us!</Button>
     </div>
   );
 }
