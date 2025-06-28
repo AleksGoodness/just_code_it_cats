@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
+import { SiGnuicecat } from 'react-icons/si';
 import { Button } from '../ui/button';
 const LS_NAME = 'theme';
 type Theme = 'dark' | null;
-
 const ThemeChanger = () => {
   const toggleTheme = () => {
     const savedTheme = localStorage.getItem(LS_NAME) as Theme;
@@ -17,8 +17,8 @@ const ThemeChanger = () => {
   }, []);
 
   return (
-    <Button size="lg" className="font-rage text-2xl" variant="secondary" onClick={toggleTheme}>
-      ThemeChanger
+    <Button size="lg" className="font-rage text-2xl capitalize" variant="default" onClick={toggleTheme}>
+      cat colour <SiGnuicecat color="var(--secondary)" />
     </Button>
   );
 };
