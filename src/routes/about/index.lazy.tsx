@@ -1,3 +1,4 @@
+import { Button } from '@/components/ui/button';
 import { createLazyFileRoute } from '@tanstack/react-router';
 
 export const Route = createLazyFileRoute('/about/')({
@@ -5,5 +6,10 @@ export const Route = createLazyFileRoute('/about/')({
 });
 
 function About() {
-  return <div>Hello "/About"!</div>;
+  return (
+    <div>
+      Hello "/About"!
+      <Button variant={'action'}>send it!</Button>
+    </div>
+  );
 }
