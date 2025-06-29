@@ -1,3 +1,4 @@
+import { Text } from '@/components/ui/text';
 import { createFileRoute, Link } from '@tanstack/react-router';
 import { motion } from 'framer-motion';
 import catPlaceholder from '../assets/img/cat.png';
@@ -20,20 +21,22 @@ function Home() {
             <h1 className="p-4 text-center text-4xl font-bold sm:text-6xl md:text-8xl">
               Just Cats <span className="font-rage text-accent-foreground font-light">Meowseum</span>
             </h1>
-            <p className="text-center text-2xl">A collection of cats from the internet.</p>
+            <Text className="text-center" variant={'xl'}>
+              A collection of cats from the internet.
+            </Text>
           </header>
           <main className="flex flex-col gap-4">
             <section className="flex flex-col items-center gap-4 text-4xl sm:flex-row">
-              <div className="border-primary rounded-full border-2 p-8 font-light">{new Date().getFullYear()}</div>
-              <div className="capitalize">necessary cat</div>
+              <Text className="border-primary rounded-full border-2 p-8 font-light">{new Date().getFullYear()}</Text>
+              <Text className="capitalize">necessary cat</Text>
             </section>
             <section className="flex flex-col items-center gap-4 md:flex-row">
               <div className="border-primary flex shrink-0 basis-1/3 flex-col gap-2 rounded-2xl border-2 p-6">
                 <h3 className="text-2xl font-bold">Caution </h3>
                 <hr className="border-primary" />
-                <p className="text-lg">
+                <Text variant={'md'}>
                   If you’re a cat person or a soon-to-be cat person you’ve come to the right place.
-                </p>
+                </Text>
               </div>
               <div className="shrink-0 basis-1/3 text-center">
                 <h3>Cat's faces</h3>
@@ -66,6 +69,7 @@ function Home() {
           </main>
         </div>
       </section>
+      ]
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import { SiGnuicecat } from 'react-icons/si';
 import { Button } from '../ui/button';
-const MotionButton = motion(Button);
+const MotionButton = motion.create(Button);
 
 interface Props {
   classNames?: string;

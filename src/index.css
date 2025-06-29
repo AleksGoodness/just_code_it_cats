@@ -124,3 +124,12 @@
     font-family: 'Poppins', sans-serif;
   }
 }
+
+@layer components {
+  large-title {
+    padding: var(--spacing-4);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}

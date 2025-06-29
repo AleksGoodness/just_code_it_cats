@@ -21,7 +21,7 @@ const NavigationPanel = () => {
     <header className="bg-background fixed w-[100%]">
       <nav className="container mx-auto flex w-[100%] flex-wrap items-center gap-2 p-2 capitalize">
         {links.map((link) => (
-          <Link {...link} key={link.to} className="[&.active]:text-amber-500">
+          <Link {...link} key={link.to} className="[&.active]:text-accent">
             {link.label}
           </Link>
         ))}
