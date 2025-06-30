@@ -57,7 +57,7 @@ function Home() {
                 }}
               >
                 <img
-                  className="h-full w-full object-cover"
+                  className="h-64 w-full object-cover"
                   style={{
                     filter: 'drop-shadow(5px 5px 2px var(--primary)) drop-shadow(-5px -5px 2px var(--primary))',
                   }}
