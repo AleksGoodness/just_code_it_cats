@@ -50,6 +50,9 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-forest: var(--forest);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-final-white: var(--final-white);
 }
 
 :root {
@@ -58,13 +61,15 @@
   /* Основные цвета */
   --background: #192928; /* Тёмный зелёно-синий (как шерсть британца) */
   --foreground: #bfea88; /* Мягкий салатовый (глаза) */
+  --forest: #142120; /* Темный шрифт текста */
 
   /* Производные */
   --card: #223b3a; /* Более светлый фон */
   --card-foreground: #d2f5a6;
   --popover: #2a4d4b; /* Акцентные элементы */
   --popover-foreground: #e5ffc4;
-
+  --footer-foreground: #e5e5e5;
+  --final-white: #fff;
   --primary: #a8e06f; /* Яркий салатовый (кнопки) */
   --primary-foreground: #0d1a19;
 
