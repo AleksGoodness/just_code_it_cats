@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@font-face {
+  font-style: italic;
+  font-weight: 400;
+  src: url('./assets/fonts/rage.woff2') format('woff2');
+  font-family: 'rage';
+  font-display: swap;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-rage: 'rage', sans-serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Основные цвета */
+  --background: #192928; /* Тёмный зелёно-синий (как шерсть британца) */
+  --foreground: #bfea88; /* Мягкий салатовый (глаза) */
+
+  /* Производные */
+  --card: #223b3a; /* Более светлый фон */
+  --card-foreground: #d2f5a6;
+  --popover: #2a4d4b; /* Акцентные элементы */
+  --popover-foreground: #e5ffc4;
+
+  --primary: #a8e06f; /* Яркий салатовый (кнопки) */
+  --primary-foreground: #0d1a19;
+
+  --secondary: #3a7d78; /* Приглушённый бирюзовый */
+  --secondary-foreground: #d2f5a6;
+
+  --muted: #3a5e5c; /* Неактивные элементы */
+  --muted-foreground: #8fb57a;
+  --accent: #4d8a85; /* Акцент (ссылки) */
+  --accent-foreground: #e5ffc4;
+
+  --destructive: #ff6b6b; /* Ошибки (яркий контраст) */
+  --destructive-foreground: #0d1a19;
+
+  --border: #2a4d4b; /* Границы */
+  --input: #3a5e5c; /* Поля ввода */
+  --ring: #a8e06f; /* Обводка фокуса */
+}
+.dark {
+  /* Основные цвета */
+  --background: #2a1a0e; /* Тёмно-коричневый (шерсть рыжего кота) */
+  --foreground: #ffb347; /* Яркий рыжий (глаза/нос) */
+
+  /* Производные */
+  --card: #3a2818; /* Более светлый коричневый */
+  --card-foreground: #ffcc70;
+  --popover: #4a341f; /* Акцентные элементы */
+  --popover-foreground: #ffd991;
+
+  --primary: #ff8c00; /* Ярко-рыжий (кнопки) */
+  --primary-foreground: #2a1a0e;
+
+  --secondary: #d35400; /* Тёмно-оранжевый */
+  --secondary-foreground: #ffcc70;
+
+  --muted: #5a3e24; /* Неактивные элементы */
+  --muted-foreground: #cc8e35;
+  --accent: #e67e22; /* Акцент (ссылки) */
+  --accent-foreground: #ffd991;
+
+  --destructive: #ff6b6b; /* Ошибки */
+  --destructive-foreground: #2a1a0e;
+
+  --border: #5a3e24; /* Границы */
+  --input: #4a341f; /* Поля ввода */
+  --ring: #ff8c00; /* Обводка фокуса */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  large-title {
+    padding: var(--spacing-4);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+}
